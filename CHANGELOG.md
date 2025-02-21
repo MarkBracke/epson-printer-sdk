@@ -1,5 +1,9 @@
 # Changelog
 
+## 21/02/2025 0.9.24
+
+- Added support for epson printers communicating over SSL
+
 ## 31/03/2023 0.9.11
 
 - Bugfix for Symbols
