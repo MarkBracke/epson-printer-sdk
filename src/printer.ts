@@ -10,9 +10,8 @@ const EPSON_XML_HEADER =
 class EpsonPrinter {
   private url;
 
-  constructor(ip: string, useSsl?: boolean)
-  {
-	  this.url = `${useSsl == true ? 'https' : 'http'}://${ip}/cgi-bin/epos/service.cgi?devid=local_printer&timeout=10000`
+  constructor(ip: string, useSsl = false) {
+	  this.url = `${useSsl ? 'https' : 'http'}://${ip}/cgi-bin/epos/service.cgi?devid=local_printer&timeout=10000`
   }
 
   public async send(print: EpsonPrint) {
